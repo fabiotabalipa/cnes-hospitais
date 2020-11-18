@@ -123,7 +123,3 @@ def get_transformed_df(files_dir, version):
         "Atende Convênio?",
     ]]
     return df_merge.sort_values(by=["UF"])
-
-
-def __get_file_name(files_dir, name, version):
-    return files_dir + "/" + name + version + ".csv"
