@@ -115,3 +115,6 @@ cython_debug/
 # Temp files
 /temp/
 cnes-hospitais.csv
+
+# OSX
+.DS_Store

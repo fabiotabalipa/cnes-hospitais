@@ -11,7 +11,12 @@ O script realiza um ETL para:
 * **L**oad: geração do arquivo `cnes-hospitais.csv` no diretório raiz do script, pronto para análise
 
 ---
+
+![Alt text](assets/example.png?raw=true "Example")
+
+---
 Autor: Fábio Tabalipa
+
 Licença: MIT
 
 > Fiquem à vontade para contribuir via *pull request* 🧑🏽‍💻
