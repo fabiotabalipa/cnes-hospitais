@@ -26,7 +26,7 @@ def get_transformed_df(files_dir, version):
         "CO_MUNICIPIO_GESTOR": str,
         "CO_CEP": str,
         "NU_TELEFONE": str,
-    })
+    }, encoding='latin-1')
     df_main = df_main.drop(df_main[
         (df_main['TP_UNIDADE'] != COD_GENERAL_HOSPITAL) &
         (df_main['TP_UNIDADE'] != COD_SPECIALIZED_HOSPITAL)
@@ -48,7 +48,7 @@ def get_transformed_df(files_dir, version):
     file_city = files_dir + "/" + PREFIX_CITY_TBL + version + ".csv"
     df_city = pd.read_csv(file_city, sep=";", dtype={
         "CO_MUNICIPIO": str,
-    })
+    }, encoding='latin-1')
     df_city = df_city[[
         "CO_MUNICIPIO",
         "NO_MUNICIPIO",
@@ -60,7 +60,7 @@ def get_transformed_df(files_dir, version):
     }).reset_index()
 
     file_beds = files_dir + "/" + PREFIX_BEDS_TBL + version + ".csv"
-    df_beds = pd.read_csv(file_beds, sep=";")
+    df_beds = pd.read_csv(file_beds, sep=";", encoding='latin-1')
     df_beds = df_beds[[
         "CO_UNIDADE",
         "QT_EXIST",
@@ -73,7 +73,7 @@ def get_transformed_df(files_dir, version):
     }).reset_index()
 
     file_insurance = files_dir + "/" + PREFIX_INSURANCE_TBL + version + ".csv"
-    df_insurance = pd.read_csv(file_insurance, sep=";")
+    df_insurance = pd.read_csv(file_insurance, sep=";", encoding='latin-1')
     df_insurance = df_insurance.drop(df_insurance[
         (df_insurance['CO_CONVENIO'] != COD_INSURANCE_OWN) &
         (df_insurance['CO_CONVENIO'] != COD_INSURANCE_THIRD) &
